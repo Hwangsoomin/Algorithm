@@ -10,7 +10,7 @@ int dr[4] = { -1,0,1,0 };
 int dc[4] = { 0,1,0,-1 };
 int check[1005][1005];
 bool flag = false;
-void bfs(queue<pair<pair<int, int>,int>> fq, queue<pair<pair<int, int>, int>> sq) {
+void bfs(queue<pair<pair<int, int>, int>> fq, queue<pair<pair<int, int>, int>> sq) {
 	while (1) {
 		while (!fq.empty()) {
 			int r = fq.front().first.first;
@@ -61,14 +61,14 @@ int main(void) {
 	scanf("%d", &t);
 	while (t--) {
 		pre = 1; pre1 = 0;
-		queue<pair<pair<int, int>,int>> fq;
+		queue<pair<pair<int, int>, int>> fq;
 		queue<pair<pair<int, int>, int>> sq;
 		memset(check, 0, sizeof(check));
 		memset(arr, '.', sizeof(arr));
 		flag = false;
 		scanf("%d%d", &w, &h);
 		for (int i = 1; i <= h; i++) {
-			for (int j = 1; j <= w;j++) {
+			for (int j = 1; j <= w; j++) {
 				scanf(" %c", &arr[i][j]);
 				if (arr[i][j] == '*')fq.push({ { i,j },1 });
 				if (arr[i][j] == '@')sq.push({ { i,j },0 });

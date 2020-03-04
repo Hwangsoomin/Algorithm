@@ -13,12 +13,12 @@
 #define MAX 1000000000
 using namespace std;
 int n, Min, Max;
-int arr[50005], sum[50005];
+int arr, sum[50005];
 int main(void) {
 	scanf("%d", &n);
 	for (int i = 1; i <= n; i++) {
-		scanf("%d", &arr[i]);
-		sum[i] = sum[i - 1] + arr[i];
+		scanf("%d", &arr);
+		sum[i] = sum[i - 1] + arr;
 	}
 	for (int i = 1; i < n; i++) {
 		for (int j = i + 1; j <= n; j++) {

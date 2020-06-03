@@ -25,7 +25,9 @@ int main(void) {
 	for (int i = 2; i <= n; i++) {
 		ll st = arr[i].first;
 		ll en = arr[i].second;
-		if (st <= anen + num) anen = en;
+		if (st <= anen + num) {
+			if (anen <= en)anen = en;
+		}
 		else {
 			ans = ans + (((anen - anst) + 1) / l);
 			if ((((anen - anst) + 1) % l) != 0)ans += 1;
